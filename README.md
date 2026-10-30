@@ -58,7 +58,7 @@ OmniSwap Studio is a full rewrite of VisoMaster using the most capable, optimize
 flowchart LR
   D["💻 Desktop app"] <--> G["Gateway"]
   W["🌐 Web app<br/>laptop · tablet · phone"] <--> G
-  S["Scripts · AI agents"] <--> E
+  S["External Scripts or Tools"] <--> E
   G <-->|"typed commands"| E["⚙️ Engine<br/>(its own process, zero Qt)"]
   E --> P["Swap pipeline<br/>detect · swap · mask · restore"]
 ```
