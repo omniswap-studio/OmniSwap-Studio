@@ -1,6 +1,6 @@
 <p align="center">
   <picture>
-    <img width="800" height="200" alt="OmniSwap-Studio_banner" src="https://github.com/user-attachments/assets/0439df58-2d24-4fce-9283-ecbfede17008" />
+    <img width="1744" height="432" alt="banner" src="https://github.com/user-attachments/assets/16048f85-a0ec-4873-98dd-924ed2e43c27" />
   </picture>
 </p>
 
