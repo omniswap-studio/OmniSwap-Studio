@@ -73,7 +73,7 @@ flowchart LR
 
 <sup>*This result will become more definitive before release</sup>
 
-- **<ins>Fixed the biggest bottleneck.</ins>** The GPU used to sit idle almost half the time waiting on Python to hand it work. Now it stays busy at all times, giving a verifiable 30%-60% speed increase for all frame processing compared to both VisoMaster and VisoMaster-Fusion.
+- **<ins>Fixed the biggest bottleneck.</ins>** The GPU used to sit idle almost half the time waiting on Python to hand it work. Now it stays busy at all times, giving a verifiable 5%-30% speed increase for all frame processing compared to both VisoMaster and VisoMaster-Fusion.
 - **<ins>UI freezing effectively eliminated.</ins>** No more modal "Loading…" popups, and heavy work like building embeddings runs in the background.
 - **<ins>Cached models load directly.</ins>** OmniSwap always loads TensorRT models straight from the cached engine.
 - **<ins>Crash recovery.</ins>** If the engine ever crashes (0 crashes in all of OmniSwap's testing), the UI window stays open, tells you, restarts it, and carries on.
