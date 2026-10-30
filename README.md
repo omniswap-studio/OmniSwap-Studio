@@ -113,12 +113,12 @@ OmniSwap Studio replaces VisoMaster's Qt window with a completely new interface.
 
 ```mermaid
 flowchart LR
-  V["🎬 A video, or a folder<br/>of them (Pre-Detect)"] --> AD["Auto Detect<br/>find + group people"]
+  V["🎬 A video, or a folder<br/>of them (Prepare clips ahead)"] --> AD["Find everyone<br/>find + group people"]
   AD --> MR["Merge duplicates"]
-  MR --> KT["Known Targets"]
-  KT --> AA["Auto Assign"]
+  MR --> KT["Remembered castings"]
+  KT --> AA["Auto-casting"]
   AA --> J["✅ Ready-to-process job"]
-  DB[("SubjectDB")] -.-> AD
+  DB[("Appearance groups")] -.-> AD
 ```
 
 ## 🔧 Other Changes
