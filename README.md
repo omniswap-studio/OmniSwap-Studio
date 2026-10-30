@@ -25,13 +25,30 @@
 </p>
 
 > [!NOTE]
-> OmniSwap Studio is not currently available to the public. **However**, after a year in development, it will be releasing very soon. Everything described below is subject to change.
+> OmniSwap Studio is not currently available to the public. It's been in development for over a year, and will be releasing very soon. Everything described below is subject to change.
+
+## 🖼️ UI Previews and Interactive Demo
+
+<p align="center">
+  <a href="https://omniswap-preview.esrvr.net/">
+  <img src="https://img.shields.io/badge/%E2%96%B6%20Click%20here%20to%20try%20an%20interactive%20demo%20of%20OmniSwap's%20UI-7B5CFF?style=for-the-badge&logoColor=white" alt="Try
+  Interactive Demo" height="42" />
+  </a>
+</p>
+<img width="3004" height="1482" alt="image" src="https://github.com/user-attachments/assets/2e70a3d6-c2e9-4211-9971-4886138b84ff" />
+
+<p align="center">
+  <a href="https://omniswap-preview.esrvr.net/">
+  <img src="https://img.shields.io/badge/%E2%96%B6%20Click%20here%20to%20try%20an%20interactive%20demo%20of%20OmniSwap's%20UI-7B5CFF?style=for-the-badge&logoColor=white" alt="Try
+  Interactive Demo" height="42" />
+  </a>
+</p>
 
 ## 📖 Background
 
 OmniSwap Studio is a full rewrite of VisoMaster using the most capable, optimized technical foundations and standards available. It **completely replaces ~90%+ of the original VisoMaster code**, overhauling all core features and capabilities to achieve drastic improvements end-to-end.
 
-## 🧩 What OmniSwap Does Differently
+## 🧩 Redesigned Core Architecture 
 
 1. **<ins>Separated the entire processing pipeline from the UI.</ins>** Everything that actually swaps faces now exists in a dedicated engine with **zero Qt imports**. It doesn't know a UI window even exists. It can handle a whole job from start to finish at the command line (images, videos + segments, HDR, VR180, denoiser, any number of jobs), and its output is **bit-identical** to what the original VisoMaster window records. Every setting, job, face/source, and the new Auto Detect system are all engine commands, not just button presses.
 2. **<ins>Moved that engine into its own process.</ins>** The window process doesn't load a single model or touch CUDA at all, so heavy work can never freeze it.
@@ -81,18 +98,18 @@ OmniSwap Studio replaces VisoMaster's Qt window with a completely new interface.
 
 ## ✨ Unique Features
 
-- **<ins>Auto Detect:</ins>** one button scans an entire video, finds every face, and groups them into target subjects via intelligent temporal analysis, so a blurry background face or a one-frame misdetection doesn't become its own person.
-- **<ins>Pre-Detect:</ins>** runs Auto Detect, Known Targets and Auto Assign on any number of videos, producing a ready-to-process job per video. *Point it at a folder of videos, walk away, and let OmniSwap handle the entire standard swapping workflow for you.*
-- **<ins>Merge review:</ins>** when the same person gets split in two (different angle, lighting, haircut), Auto Detect suggests merges with a confidence percentage.
-- **<ins>Auto Assign:</ins>** with one click you can automatically assign all detected subjects by comparing their faces against your saved embeddings, then ranking them via face similarity and weighted demographics.
-- **<ins>SubjectDB:</ins>** the memory behind all of it. Every person gets an identity made of several appearance clusters (head turned vs. straight on, etc.), so faces are recognized as who they are, not just "the box that was here last frame." An optional strict mode makes Play and Record swap only faces already tied to a known person, so a random passerby never gets swapped by accident.
-- **<ins>Known Targets:</ins>** when you assign a detected target subject to a source embedding, OmniSwap can remember that, so they're automatically recognized and assigned in any future video.
-- **<ins>Demographics:</ins>** every detected face and every saved source gets gender, race, age range and hair color labels.
+- **<ins>Find everyone:</ins>** one button scans an entire video, finds every face, and groups them into people via intelligent temporal analysis, so a blurry background face or a one-frame misdetection doesn't become its own person.
+- **<ins>Prepare clips ahead:https://www.reddit.com/</ins>** runs Find everyone, Remembered castings and Auto-casting on any number of videos, producing a ready-to-process job per video. *Point it at a folder of videos, walk away, and let OmniSwap handle the entire standard swapping workflow for you.*
+- **<ins>Duplicate review:</ins>** when the same person gets split in two (different angle, lighting, haircut), Find everyone suggests merges with a confidence percentage, and you choose Merge or Keep apart.
+- **<ins>Auto-casting:</ins>** with one click you can automatically cast every detected person by comparing their faces against your Faces library, then ranking them via face similarity and weighted demographics.
+- **<ins>Appearance groups:</ins>** the memory behind all of it. Every person gets an identity made of several appearance groups (head turned vs. straight on, etc.), so faces are recognized as who they are, not just "the box that was here last frame." An optional strict mode (*Swap only confirmed people in play and render*) makes Play and Render swap only faces already tied to a known person, so a random passerby never gets swapped by accident.
+- **<ins>Remembered castings:</ins>** when you cast a saved face on a detected person, OmniSwap can remember that, so they're automatically recognized and cast in any future video.
+- **<ins>Demographics:</ins>** every detected face and every saved face gets gender, race, age range and hair color labels.
 - **<ins>Deep-Learning:</ins>** optionally, new people who appear while a video is playing get their own face card automatically, and OmniSwap learns what each subject looks like at various angles, in certain lighting, at different distances, etc. The more frames processed with Deep-Learning enabled, the better OmniSwap recognizes them.
-- **<ins>Strict demographic matching:</ins>** Auto Assign can allow only sources that match on gender and race, with age and hair color either required or just preferred.
-- **<ins>Known Targets management:</ins>** review, clear, export and import every remembered assignment, and see which ones point to missing source files.
-- **<ins>Identity overlays:</ins>** when paused, overlays show who each face is, the match confidence, and which saved faces it looks like.
-- **<ins>Auto Detect analytics:</ins>** live progress, how many faces passed quality, and a score chart with a suggested threshold you can apply in one click.
+- **<ins>Require matching demographics:</ins>** Auto-casting can allow only faces that match on gender and race, with age and hair color either required or just preferred.
+- **<ins>Managing remembered castings:</ins>** review, clear, export and import every remembered casting, and see which ones point to missing face files.
+- **<ins>Identity details:</ins>** when paused, overlays from the Show menu show who each face is, the match confidence, and which saved faces it looks like.
+- **<ins>Find everyone progress:</ins>** live progress, how many faces passed quality, and a score chart with a suggested threshold you can apply in one click.
 
 ```mermaid
 flowchart LR
